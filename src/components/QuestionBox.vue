@@ -9,7 +9,7 @@
 
             <b-list-group>
                 <b-list-group-item
-                v-for="(answer, index) in answers"
+                v-for="(answer, index) in shuffledAnswers"
                 :key="index"
                 @click="selectAnswer(index)"
                 :class="[selectedIndex === index ? 'selected' : '']"
