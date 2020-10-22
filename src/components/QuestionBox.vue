@@ -13,6 +13,7 @@
                 :key="index"
                 @click="selectAnswer(index)"
                 :class="answerClass(index)"
+                :disabled="answered"
                 >
                     {{ answer }}
                 </b-list-group-item>
@@ -25,7 +26,7 @@
             >
                 Submit
             </b-button>
-            <b-button v-on:click="next" variant="success">
+            <b-button v-on:click="next" variant="success" :disabled="(!answered)">
                 Next
             </b-button>
         </b-jumbotron>
@@ -124,5 +125,6 @@ export default {
     }
     .incorrect {
         background-color: red;
+        color: white;
     }
 </style>
