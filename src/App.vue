@@ -15,6 +15,40 @@
             v-bind:numTotal="numTotal"
             v-bind:numCorrect="numCorrect"
           />
+          <!-- Adding Skeleton UI until API is being fetched -->
+          <b-jumbotron v-else>
+            <b-skeleton animation="wave" width="85%"></b-skeleton>
+            <b-skeleton animation="wave" width="70%"></b-skeleton>
+            <hr class="my-4">
+            <b-list-group>
+              <b-list-group-item>
+                <b-skeleton animation="wave" width="55%"></b-skeleton>
+                <b-skeleton animation="wave" width="70%"></b-skeleton>                      
+              </b-list-group-item>
+              <b-list-group-item>
+                <b-skeleton animation="wave" width="55%"></b-skeleton>
+                <b-skeleton animation="wave" width="70%"></b-skeleton>                      
+              </b-list-group-item>
+              <b-list-group-item>
+                <b-skeleton animation="wave" width="55%"></b-skeleton>
+                <b-skeleton animation="wave" width="70%"></b-skeleton>                      
+              </b-list-group-item>
+              <b-list-group-item>
+                <b-skeleton animation="wave" width="55%"></b-skeleton>
+                <b-skeleton animation="wave" width="70%"></b-skeleton>                      
+              </b-list-group-item>
+            </b-list-group>
+            
+            <b-button variant="primary" disabled class="mt-3 mr-2">
+              <b-spinner small></b-spinner>
+              Submit <i class="fas fa-paper-plane"></i>
+            </b-button>
+            <b-button variant="success" disabled class="mt-3">
+              <b-spinner small></b-spinner>
+              Next <i class="fas fa-chevron-circle-right"></i>
+            </b-button>
+          </b-jumbotron>
+
         </b-col>
       </b-row>
     </b-container>
