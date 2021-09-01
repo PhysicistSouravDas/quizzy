@@ -12,6 +12,8 @@
             v-bind:currentQuestion="questions[index]"
             v-bind:next="next"
             v-bind:increment="increment"
+            v-bind:numTotal="numTotal"
+            v-bind:numCorrect="numCorrect"
           />
         </b-col>
       </b-row>
